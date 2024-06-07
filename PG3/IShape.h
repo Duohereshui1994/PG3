@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+template<typename T>
 class IShape
 {
 public:
@@ -8,6 +9,6 @@ public:
 	virtual void Draw() = 0;
 protected:
 	//面積
-	float size_;
+	T size_;
 };
 

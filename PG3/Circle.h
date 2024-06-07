@@ -1,14 +1,15 @@
 #pragma once
 #include "IShape.h"
-class Circle : public IShape
+template<typename T>
+class Circle : public IShape<T>
 {
 public:
+	Circle(T pi, T radius);
 	//関数オーバーライド
 	void Size() override;
 	void Draw() override;
 private:
 	//パラメータ
-	float pi_ = 3.14f;
-	float radius_ = 2.0f;
+	T pi_;
+	T radius_;
 };
-

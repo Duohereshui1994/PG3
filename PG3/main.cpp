@@ -5,8 +5,8 @@
 int main() {
 
 	//生成
-	Circle* circle = new Circle();
-	Rectangle* rectangle = new Rectangle();
+	Circle<float>* circle = new Circle<float>(3.14f, 2.0f);
+	Rectangle<float>* rectangle = new Rectangle<float>(4.0f, 5.0f);
 
 	//運行
 	circle->Size();

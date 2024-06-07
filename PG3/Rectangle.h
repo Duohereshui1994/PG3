@@ -1,15 +1,17 @@
 #pragma once
 #include "IShape.h"
-class Rectangle : public IShape
+template<typename T>
+class Rectangle : public IShape<T>
 {
 public:
+	Rectangle(T width, T height);
 	//関数オーバーライド
 	void Size() override;
 	void Draw() override;
 private:
 	//パラメータ
-	float width_ = 3.0f;
-	float height_ = 4.0f;
+	T width_;
+	T height_;
 	
 };
 
